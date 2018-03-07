@@ -26,7 +26,7 @@ import com.example.zyl.stickytablayout.Utils;
 /**
  * 粘性导航栏布局
  */
-public class StickyNavLayout extends LinearLayout {
+public class StickyView extends LinearLayout {
     private static final String TAG = "StickyNavLayout";
 
     /**
@@ -71,7 +71,7 @@ public class StickyNavLayout extends LinearLayout {
     private boolean alreadyFlingFirst = false;
     float pullDownDistance;
 
-    public StickyNavLayout(Context context, AttributeSet attrs) {
+    public StickyView(Context context, AttributeSet attrs) {
         super(context, attrs);
         setOrientation(LinearLayout.VERTICAL);
 

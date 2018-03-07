@@ -23,7 +23,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import com.example.zyl.stickytablayout.view.StickyNavLayout;
+import com.example.zyl.stickytablayout.view.StickyView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private String[] mTitles = new String[]{"简介", "评价", "相关"};
     private TabLayout mIndicator;
     private ViewPager mViewPager;
-    private StickyNavLayout snl;
+    private StickyView snl;
     private FragmentPagerAdapter mAdapter;
     private float imgFirstHeight;
     private TabFragment[] mFragments = new TabFragment[mTitles.length];
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         snl.setPullDownListener(new MyPullDownListener());
     }
 
-    private class MyPullDownListener implements StickyNavLayout.PullDownWithUpListener {
+    private class MyPullDownListener implements StickyView.PullDownWithUpListener {
         /**
          * 是否达到刷新条件
          */
@@ -156,7 +156,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initViews() {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-        snl = (StickyNavLayout) findViewById(R.id.snl);
+        snl = (StickyView) findViewById(R.id.snl);
         topView = (RelativeLayout) findViewById(R.id.id_stickyNavLayout_topView);
         mIndicator = (TabLayout) findViewById(R.id.id_stickyNavLayout_indicator);
         mViewPager = (ViewPager) findViewById(R.id.id_stickyNavLayout_viewpager);

@@ -3,7 +3,7 @@
     android:layout_height="match_parent"
     >
 
-    <com.example.zyl.stickytablayout.view.StickyNavLayout
+    <com.example.zyl.stickytablayout.view.StickyView
         android:id="@+id/snl"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -44,7 +44,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 
-    </com.example.zyl.stickytablayout.view.StickyNavLayout>
+    </com.example.zyl.stickytablayout.view.StickyView>
 
 
     <android.support.v7.widget.Toolbar
