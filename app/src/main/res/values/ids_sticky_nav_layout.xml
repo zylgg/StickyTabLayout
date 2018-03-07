@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="id_stickyNavLayout_topView" type="id"/>
+    <item name="id_stickyNavLayout_indicator" type="id"/>
+    <item name="id_stickyNavLayout_viewpager" type="id"/>
+    <item name="id_stickyNavLayout_innerScrollview" type="id"/>
+
+    <item type="id" name="statusBarUtil_fake_status_bar_view" />
+    <item type="id" name="statusBarUtil_translucent_view" />
+</resources>
