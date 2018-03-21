@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
                 float ratio = last_distance / imgFirstHeight;
 //                Log.i(TAG, "pullDownDistance: "+ratio);
 
-                resetAnmiation.setDuration((long) (ratio*300));
+                resetAnmiation.setDuration((long) (ratio * 300));
                 topView.startAnimation(resetAnmiation);
             } else {
                 //当前需要设置的高度
@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
                 topView.getLayoutParams().height = (int) h;
                 topView.requestLayout();
             }
-            last_distance=distance;
+            last_distance = distance;
         }
 
         @Override
@@ -119,18 +119,17 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 mwindow.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_VISIBLE);
             }
-            toolThemeColor= ColorUtils.blendARGB(Color.WHITE, Color.DKGRAY, expandedPercentage);
+            toolThemeColor = ColorUtils.blendARGB(Color.WHITE, Color.DKGRAY, expandedPercentage);
             mwindow.setStatusBarColor(ColorUtils.blendARGB(Color.TRANSPARENT, Color.WHITE, expandedPercentage));
+
+
+            Drawable upArrow = ContextCompat.getDrawable(this, R.drawable.abc_ic_ab_back_material);
+            //以下三行是修改回退按钮为白色的逻辑
+            upArrow.setColorFilter(toolThemeColor, PorterDuff.Mode.SRC_ATOP);
+            getSupportActionBar().setHomeAsUpIndicator(upArrow);
+            toolbar.setTitleTextColor(toolThemeColor);
+            toolbar.setBackgroundColor(ColorUtils.blendARGB(Color.TRANSPARENT, Color.WHITE, expandedPercentage));
         }
-
-        Drawable upArrow = ContextCompat.getDrawable(this, R.drawable.abc_ic_ab_back_material);
-        //以下三行是修改回退按钮为白色的逻辑
-        upArrow.setColorFilter(toolThemeColor, PorterDuff.Mode.SRC_ATOP);
-        getSupportActionBar().setHomeAsUpIndicator(upArrow);
-        toolbar.setTitleTextColor(toolThemeColor);
-
-
-        toolbar.setBackgroundColor(ColorUtils.blendARGB(Color.TRANSPARENT, Color.WHITE, expandedPercentage));
     }
 
     private class SmoothAnimation extends Animation {

@@ -441,7 +441,7 @@ public class StatusBarUtil {
      */
     public static void setTranslucentForImageView(Activity activity, @IntRange(from = 0, to = 255) int statusBarAlpha,
                                                   View needOffsetView) {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT) {
+        if (Build.VERSION.SDK_INT <=Build.VERSION_CODES.KITKAT) {
             return;
         }
 //        setTransparentForWindow(activity);

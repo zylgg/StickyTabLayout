@@ -53,7 +53,7 @@ public class StickyView extends LinearLayout {
     /**
      * 标题栏高度
      */
-    private int TOP_H = 144;
+    private int TOP_H = 56;
 
     /**
      * 当前布局抬起手时瞬时速度可以滑动的距离
@@ -74,7 +74,7 @@ public class StickyView extends LinearLayout {
     public StickyView(Context context, AttributeSet attrs) {
         super(context, attrs);
         setOrientation(LinearLayout.VERTICAL);
-
+        TOP_H= (int) (48*context.getResources().getDisplayMetrics().density+0.5f);
         TOP_H = TOP_H + (Build.VERSION.SDK_INT > 19 ? 72 : 0);
         mScroller = new OverScroller(context);
 //        mTouchSlop = ViewConfiguration.get(context).getScaledTouchSlop();
